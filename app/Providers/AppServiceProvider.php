@@ -3,6 +3,10 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Console\Commands\ListTodos;
+use App\Console\Commands\AddTodo;
+use App\Console\Commands\DeleteTodo;
+use App\Console\Commands\CompleteTodo;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +23,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                ListTodos::class,
+                AddTodo::class,
+                DeleteTodo::class,
+                CompleteTodo::class,
+            ]);
+        }
     }
 }
