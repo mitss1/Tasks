@@ -31,7 +31,8 @@
 <br />
 <div align="center">
   <a href="https://github.com/mitss1/Tasks">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="[images/logo.png](https://github.com/user-attachments/assets/e7fb57f8-f118-4910-89c7-feaf9309b7aa)" alt="Logo" width="80" height="80">
+
   </a>
 
 <h3 align="center">Tasks</h3>
@@ -70,7 +71,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -98,12 +98,12 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
+Setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+Run composer install
 * Composer
   ```sh
   Composer install
@@ -175,7 +175,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- CONTACT -->
 ## Contact
 
-Your Name - matsis11@hotmail.com
+Mats Søiland - matsis11@hotmail.com
 
 Project Link: [https://github.com/mitss1/Tasks](https://github.com/mitss1/Tasks)
 
