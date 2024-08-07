@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/mitss1/Tasks">
-    <img src="(https://github.com/user-attachments/assets/e7fb57f8-f118-4910-89c7-feaf9309b7aa)" alt="Logo" width="80" height="80">
+    <img src="[https://github.com/user-attachments/assets/e7fb57f8-f118-4910-89c7-feaf9309b7aa]" alt="Logo" width="80" height="80">
 
   </a>
 
