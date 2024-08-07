@@ -72,9 +72,7 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -83,9 +81,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `mitss1`, `Tasks`, `mats-s%C3%B8iland-386493269`, `hotmail`, `matsis11`, `Tasks`, `project_description`
+<img width="555" alt="Screenshot 2024-08-07 at 17 07 42" src="https://github.com/user-attachments/assets/cd5df691-572f-4d50-8a5a-e808dc4c872d">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
