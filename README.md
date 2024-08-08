@@ -82,7 +82,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img width="555" alt="Screenshot 2024-08-07 at 17 07 42" src="https://github.com/user-attachments/assets/cd5df691-572f-4d50-8a5a-e808dc4c872d">
+<img width="537" alt="Screenshot 2024-08-08 at 21 50 43" src="https://github.com/user-attachments/assets/868ee854-0b18-4baa-a53c-9ae4a33f7646">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
