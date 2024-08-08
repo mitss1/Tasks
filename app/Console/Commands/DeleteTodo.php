@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use App\Models\Todo;
 use function Laravel\Prompts\select;
+use function Laravel\Prompts\form;
 
 class DeleteTodo extends Command
 {
@@ -37,14 +38,22 @@ class DeleteTodo extends Command
             return [$todo->id => $todo->task];
         })->toArray();
 
-        $id = select('Enter the ID of the todo to delete:', $choices);
+        $responses = form()
+            ->select('Enter the ID of the todo to delete:', $choices, name: 'id')
+            ->confirm('Are you sure you want to delete this task?', name: 'confirm')
+            ->submit();
 
-        $todo = Todo::find($id);
-        if ($todo) {
-            $todo->delete();
-            $this->info('Todo deleted.');
+        if($responses['confirm']) {
+            $todo = Todo::find($responses['id']);
+
+            if ($todo) {
+                $todo->delete();
+                $this->info('Todo deleted.');
+            } else {
+                $this->error('Todo not found.');
+            }
         } else {
-            $this->error('Todo not found.');
+                $this->info('Todo deletion canceled.');
         }
     }
 }
