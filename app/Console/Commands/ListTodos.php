@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\Models\Todo;
+use function Laravel\Prompts\table;
 
 class ListTodos extends Command
 {
@@ -26,14 +27,24 @@ class ListTodos extends Command
      */
     public function handle()
     {
-        $todos = Todo::all();
+        $todos = Todo::all('id', 'task', 'completed');
+
         if ($todos->isEmpty()) {
             $this->info("No Todos found.");
-        } else {
-            foreach($todos as $todo) {
-                $status = $todo->completed ? '' : ' ';
-                $this->info("{$todo->id}: {$todo->task} [{$status}]");
-            }
+            return;
         }
+
+        $rows = $todos->map(function($todo) {
+            return [
+                'ID'        => $todo->id,
+                'Task'      => $todo->task,
+                'Completed' => $todo->completed ? '[]' : '[ ]',
+            ];
+        })->toArray();
+
+        table(
+            headers: ['ID', 'Task', 'Completed'],
+            rows: $rows
+        );
     }
 }
