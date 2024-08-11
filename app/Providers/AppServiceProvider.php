@@ -7,6 +7,7 @@ use App\Console\Commands\ListTodos;
 use App\Console\Commands\AddTodo;
 use App\Console\Commands\DeleteTodo;
 use App\Console\Commands\CompleteTodo;
+use App\Console\Commands\AllTodo;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -29,6 +30,7 @@ class AppServiceProvider extends ServiceProvider
                 AddTodo::class,
                 DeleteTodo::class,
                 CompleteTodo::class,
+                AllTodo::class,
             ]);
         }
     }
