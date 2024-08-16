@@ -104,12 +104,6 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Run composer install
-* Composer
-  ```sh
-  Composer install
-  ```
-
 ### Installation
 
 1. Clone the repo
@@ -119,6 +113,10 @@ Run composer install
 2. Create a Laravel app key
    ```sh
    php artisan key:generate
+   ```
+3. Run composer install
+   ```sh
+   Composer install
    ```
 3. Connect to an sqllite database and migrate
    ```sh
