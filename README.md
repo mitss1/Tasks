@@ -124,6 +124,15 @@ Run composer install
    ```sh
    php artisan migrate:fresh
    ```
+4. Open bash or zsh config (optional if you want to call todo from anywhere)
+   ```sh
+    vim ~/.bashrc
+    vim ~/.zshrc
+   ```
+5. Set up alias (optional if you want to call todo from anywhere)
+   ```sh
+    alias todo="php /YourPathHere/Tasks/artisan todo:all"
+   ```
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
