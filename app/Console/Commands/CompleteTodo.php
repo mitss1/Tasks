@@ -30,7 +30,7 @@ class CompleteTodo extends Command
         $todos = Todo::where('completed', false)->get(['id', 'task']);
 
         if ($todos->isEmpty()) {
-            $this->info('No pending todos found.');
+            $this->info('No pending tasks found.');
             return;
         }
 
@@ -46,7 +46,7 @@ class CompleteTodo extends Command
             if ($todo) {
                 $todo->completed = true;
                 $todo->save();
-                $this->info('Todo marked as completed.');
+                $this->info("Task '($todo->task)' marked as completed.");
             } else {
                 $this->error('Todo not found.');
             }

@@ -32,8 +32,8 @@ class AllTodo extends Command
             options: [
                 'list' => 'List all tasks',
                 'add' => 'Add a new task',
-                'complete' => 'Complete a task',
-                'delete' => 'Delete a task'
+                'complete' => 'Complete selected tasks',
+                'delete' => 'Delete selected tasks'
             ]
         );
         $this->call("todo:$command");
