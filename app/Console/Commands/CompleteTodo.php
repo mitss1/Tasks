@@ -4,7 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\Models\Todo;
-use function Laravel\Prompts\select;
+use function Laravel\Prompts\multiselect;
 
 class CompleteTodo extends Command
 {
@@ -38,15 +38,18 @@ class CompleteTodo extends Command
             return [$todo->id => $todo->task];
         })->toArray();
 
-        $id = select('Select a todo to mark as completed:', $choices);
+        $ids = multiselect('Select a todo to mark as completed:', $choices);
 
-        $todo = Todo::find($id);
-        if ($todo) {
-            $todo->completed = true;
-            $todo->save();
-            $this->info('Todo marked as completed.');
-        } else {
-            $this->error('Todo not found.');
+
+        foreach ($ids as $id) {
+            $todo = Todo::find($id);
+            if ($todo) {
+                $todo->completed = true;
+                $todo->save();
+                $this->info('Todo marked as completed.');
+            } else {
+                $this->error('Todo not found.');
+            }
         }
     }
 }
