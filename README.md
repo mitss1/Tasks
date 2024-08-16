@@ -151,6 +151,10 @@ There are 4 main uses for the CLI. Listing tasks, adding new tasks, completing t
    ```sh
    php artisan todo:delete
    ```
+5. List all commands
+   ```sh
+   php artisan todo:all
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
