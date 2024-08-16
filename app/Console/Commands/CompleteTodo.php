@@ -38,7 +38,7 @@ class CompleteTodo extends Command
             return [$todo->id => $todo->task];
         })->toArray();
 
-        $ids = multiselect('Select a todo to mark as completed:', $choices);
+        $ids = multiselect('Select the tasks you want to complete using space:', $choices);
 
 
         foreach ($ids as $id) {
